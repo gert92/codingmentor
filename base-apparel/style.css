@@ -11,12 +11,17 @@ body {
 .container {
   max-width: 1440px;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   margin: 0 auto;
   /* overflow: hidden; */
 }
 
 .content {
+  display: grid;
+  row-gap: 50px;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: auto;
   background-image: url(/base-apparel/images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   height: 800px;
@@ -24,12 +29,16 @@ body {
 }
 
 .brand {
-  margin-top: 80px;
-  margin-left: 150px;
+  /* margin-top: 80px;
+  margin-left: 150px; */
+  grid-column: 4/12;
+  grid-row: 2/3;
 }
 
 .info {
-  margin: 130px 250px 0 150px;
+  grid-column: 4/12;
+  grid-row: 5/15;
+  /* margin: 130px 250px 0 150px; */
 }
 
 h1 {
@@ -115,4 +124,64 @@ button:hover {
 
 .hero {
   width: auto;
+  /* grid-column: 3/5; */
+}
+
+.heromobile {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .container {
+    /* display: grid; */
+    grid-auto-rows: auto;
+    max-width: 100%;
+    /* row-gap: 20px; */
+  }
+  .content {
+    height: 100%;
+    width: 100%;
+    /* grid-auto-rows: auto;/ */
+    grid-template-rows: repeat(5, auto);
+    row-gap: 40px;
+  }
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .brand {
+    grid-row: 2/3;
+    grid-column: 2/17;
+    /* margin-top: 80px;
+    margin-left: 150px; */
+  }
+  .hero {
+    grid-row: 3/4;
+    grid-column: 1/17;
+  }
+  .info {
+    grid-row: 4/5;
+    grid-column: 2/16;
+  }
+
+  .herodesktop {
+    display: none;
+  }
+  .heromobile {
+    display: block;
+  }
+
+  .icon {
+    right: 90px;
+    top: 13px;
+  }
+  .error p {
+    text-align: left;
+  }
 }
