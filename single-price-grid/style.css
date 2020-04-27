@@ -3,6 +3,10 @@
     padding: 0;
     overflow: auto;
 }
+html{
+    background-color: hsl(204, 43%, 93%);
+
+}
 
 body {
     font-family: 'Karla', sans-serif;
@@ -10,8 +14,8 @@ body {
 }
 
 .container {
-    width: 1440px;
-    height: 100vh;
+    max-width: 1440px;
+    /* height: 100vh; */
     margin: 0 auto;
     background-color: hsl(204, 43%, 93%);
 }
@@ -19,7 +23,8 @@ body {
 .price {
     display: grid;
     /* background-color: red; */
-    width: 375px;
+    width: 30%;
+    height: 100%;
     max-width: 100%;
     margin: 20vh auto;
     grid-template-columns: repeat(2, 1fr);
