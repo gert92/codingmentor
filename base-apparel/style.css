@@ -175,6 +175,7 @@ button:hover {
   }
   .heromobile {
     display: block;
+    width: 100%;
   }
 
   .icon {
